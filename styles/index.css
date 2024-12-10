@@ -1,13 +1,14 @@
 :root {
-  --purple: #4c3698;
+  --accent: #ff7b7b;
   --green: #4eaf8c;
   --white: #ececec;
   --gradient: linear-gradient(
     331deg,
-    rgba(76, 54, 152, 1) 20%,
-    rgba(78, 175, 140, 1) 55%
+    rgb(200, 200, 200) 20%,
+    rgb(126, 224, 188) 55%
   );
 }
+
 .page {
   display: flex;
   justify-content: center;
@@ -16,7 +17,6 @@
   margin: 0 auto;
   color: #2b2b2b;
   font-family: monospace;
-  background: rgb(154, 132, 231);
   background: var(--gradient);
 }
 
@@ -37,9 +37,9 @@
   border-bottom-right-radius: 12px;
   border-bottom-left-radius: 12px;
   padding: 0.4em 0;
-  color: red;
+  color: var(--accent);
   text-align: center;
-  background-color: white;
+  background-color: var(--white);
 }
 
 .timers-setup {
@@ -54,7 +54,7 @@
 
 .timers-setup input,
 .timers-setup button {
-  background-color: white;
+  background-color: var(--white);
 }
 
 .timers-setup input:focus-visible,
@@ -71,7 +71,7 @@
 }
 
 .timers-setup button:hover {
-  background-color: var(--purple);
+  background-color: var(--accent);
 }
 
 .button:active {
@@ -99,12 +99,13 @@
   width: 100%;
   border-radius: 10px;
   padding: 1em;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--white);
   transition: 0.3s ease-in-out;
 }
 
 .timer:hover {
   background-color: rgba(255, 255, 255, 1);
+  transform: scale(1.03);
 }
 
 .timer-text {
@@ -125,11 +126,10 @@
   padding: 0.5em 2em;
   color: white;
   text-transform: uppercase;
-  background-color: var(--purple);
+  background-color: var(--accent);
 }
 
 .button:hover {
   border-color: var(--green);
-  color: var(--white);
   background-color: var(--green);
 }
