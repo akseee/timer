@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer</title>
+    <link rel="stylesheet" href="./styles/global.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+  <body class="page">
+    <div class="error visually-hidden" id="error"></div>
+    <div class="app">
+      <h1 aria-label="timer" class="visually-hidden">Timer</h1>
+      <div id="timers-setup" class="timers-setup">
+        <input
+          type="number"
+          id="timer-input"
+          placeholder="Введите время в секундах"
+        />
+        <button type="button" class="button" id="add-timer">
+          Добавить таймер
+        </button>
+      </div>
+      <ul id="timers" class="timers-active"></ul>
+    </div>
+    <template id="timer">
+      <li class="timer">
+        <div class="number">
+          <span class="number"></span>
+          .
+        </div>
+        <div class="timer-text">
+          <p class="time">
+            <span class="hours"></span>
+            :
+            <span class="seconds"></span>
+          </p>
+        </div>
+        <div class="timer-controls">
+          <button type="button" class="button control">stop</button>
+          <button type="button" class="button control">delete</button>
+        </div>
+      </li>
+    </template>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>
