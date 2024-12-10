@@ -1,11 +1,11 @@
 :root {
   --accent: #ff7b7b;
-  --green: #4eaf8c;
+  --green: rgb(81, 121, 93);
   --white: #ececec;
   --gradient: linear-gradient(
     331deg,
     rgb(200, 200, 200) 20%,
-    rgb(126, 224, 188) 55%
+    rgb(123, 182, 141) 55%
   );
 }
 
